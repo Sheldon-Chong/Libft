@@ -6,7 +6,7 @@
 /*   By: shechong <shechong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 11:49:13 by shechong          #+#    #+#             */
-/*   Updated: 2023/05/06 13:02:54 by shechong         ###   ########.fr       */
+/*   Updated: 2023/05/09 15:12:07 by shechong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = 0;
 	ptr = 0;
+	while (c >= 128)
+		c -= 128;
 	while (s[i])
 	{
 		if (s[i] == c)
